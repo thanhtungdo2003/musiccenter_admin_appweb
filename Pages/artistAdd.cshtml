@@ -1,0 +1,24 @@
+﻿@page
+@model artistAddModel
+@{
+    ViewData["Title"] = "Thêm nghệ sĩ";
+}
+<div class="main">
+    <h1>QUẢN LÝ - MUSIC-CENTER . THÊM NGHỆ SĨ</h1>
+    <hr />
+    <div class="add-game-main-content">
+        <div class="form-add">
+            <div class="input">
+                <label for="">Nghệ Danh</label><br><input class="textbox" type="text" name="" id="stageName" placeholder="Nhập Nghệ danh" /><br>
+            </div>
+            <div class="add-more">
+                <label for="imageUpload">Ảnh đại diện</label>
+                <div class="picture" id="avtArtistPreview"></div>
+
+                <br>
+                <input type="file" name="avtArtist" id="avtArtistUpload" accept="image/*">
+                <button class="sumbit-button" id="artist-sumbit">THÊM</button>
+            </div>
+        </div>
+    </div>
+</div>

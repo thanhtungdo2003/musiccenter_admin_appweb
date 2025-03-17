@@ -1,0 +1,77 @@
+﻿@page
+@{
+    ViewData["Title"] = "Trang thống kê";
+}
+<div class="main">
+    <h1>QUẢN LÝ - MUSIC-CENTER . THỐNG KÊ</h1>
+    <hr />
+    <div class="charts-container">
+        <div class="row-char1">
+            <div class="row1-element">
+                <div>
+                    <img src="~/lib/play-button.png"/>
+                    <p class="title-row1-item">Tổng số bài hát</p>
+                </div>
+                <div class="row1-value" id="row1-total-record">0</div>
+            </div>
+            <div class="row1-element">
+                <div>
+                    <img src="~/lib/artist.png" />
+                    <p class="title-row1-item">Tổng số nghệ sĩ</p>
+                </div>
+                <div class="row1-value" id="row1-total-artist">0</div>
+            </div>
+            <div class="row1-element">
+                <div>
+                    <img src="~/lib/group.png" />
+                    <p class="title-row1-item">Tổng số người dùng</p>
+                </div>
+                <div class="row1-value" id="row1-total-user">0</div>
+            </div>
+        </div>
+        <div class="row-chart2">
+            <div class="artists-chart-container">
+                <canvas id="artists-chart"></canvas>
+            </div>
+            <div class="artists-chart-control">
+                <p>Tùy chọn</p>
+                <hr />
+                <label>Trang: </label>
+                <br />
+                <div class="artists-chart-page-control">
+                    <input id="artists-chart-page-control-perious" type="button" value="◄" />
+                    <input id="artists-chart-page-control-value" type="text" value="1" readonly />
+                    <input id="artists-chart-page-control-next" type="button" value="►" />
+                </div><br />
+                <label>Top: </label><br />
+                <div class="artists-chart-top-control">
+                    <input id="artists-chart-top-control-down" type="button" value="▼" />
+                    <input id="artists-chart-top-control-value" type="text" value="10" readonly />
+                    <input id="artists-chart-top-control-up" type="button" value="▲" />
+                </div><br />
+            </div>
+        </div>
+        <div class="row-chart2">
+            <div class="records-chart-control">
+                <p>Tùy chọn</p>
+                <hr />
+                <label>Trang: </label>
+                <br />
+                <div class="records-chart-page-control">
+                    <input id="records-chart-page-control-perious" type="button" value="◄" />
+                    <input id="records-chart-page-control-value" type="text" value="1" readonly />
+                    <input id="records-chart-page-control-next" type="button" value="►" />
+                </div><br />
+                <label>Top: </label><br />
+                <div class="records-chart-top-control">
+                    <input id="records-chart-top-control-down" type="button" value="▼" />
+                    <input id="records-chart-top-control-value" type="text" value="10" readonly />
+                    <input id="records-chart-top-control-up" type="button" value="▲" />
+                </div><br />
+            </div>
+            <div class="records-chart-container">
+                <canvas id="records-chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

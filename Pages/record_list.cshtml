@@ -1,0 +1,28 @@
+﻿@page
+@{
+    ViewData["Title"] = "Danh sách bài hát";
+}
+<div class="main">
+    <h1>QUẢN LÝ - MUSIC-CENTER . DANH SÁCH BÀI HÁT</h1>
+    <hr />
+    
+    <div class="table-container">
+        <table id="table-recordlist">
+            <tr class="field-title">
+                <th><input class="checkbox-data-all" type="checkbox" /></th>
+                <th>ID</th>
+                <th>Tên bài hát</th>
+                <th>Thể loại</th>
+                <th>Lượt nghe</th>
+                <th>Nghệ sĩ</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <div class="table-control">
+        <div class="table-page-control-container">
+            <button id="record-reload"><img src="~/lib/refresh-arrow.png"/></button>
+            <input id="page-next" type="button" value="Hiển thị thêm..."/>
+        </div>
+    </div>
+</div>

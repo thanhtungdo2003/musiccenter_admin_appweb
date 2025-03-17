@@ -1,0 +1,55 @@
+﻿@page
+@model musicaddModel
+@{
+    ViewData["Title"] = "Thêm bản ghi";
+}
+<div class="main">
+    <h1>QUẢN LÝ - MUSIC-CENTER . THÊM BẢN GHI</h1>
+    <hr />
+    <div class="add-game-main-content">
+        <div class="form-add">
+                <div class="input">
+                <label for="">Tên hiển thị</label><br><input class="textbox" type="text" name="" id="displaynameRecord" placeholder="Nhập tên hiển thị" /><br>
+                    <label for="">Nghệ Sĩ</label><br>
+                        <select class="textbox" name="artistUid" id="artists-list">
+
+                        </select><br>
+
+                <label for="">Trả phí</label><br>
+                <div class="checkbox-wrapper-8">
+                    <input type="checkbox" id="payfee-checkbox-addaudio" class="tgl tgl-skewed">
+                    <label for="payfee-checkbox-addaudio" data-tg-on="ON" data-tg-off="OFF" class="tgl-btn"></label>
+                </div>
+                <label for="">Thể loại</label><br>
+                <select class="textbox" name="" id="category-list">
+                </select><br>
+                    <label for="">Ảnh bìa</label>
+                <div class="cover_picture" id="coverImgPreview"></div>
+
+                <br>
+                <input type="file" name="cover_img" id="coverImgUpload" accept="image/*">
+                <br />
+                <label>Lời bài hát</label>
+                <br />
+                <textarea id="lyricsTextBox"></textarea>
+                <br />
+                <label>Thông tin bài hát</label>
+                <br />
+                <textarea id="descriptionTextBox"></textarea>
+                </div>
+                <div class="add-more">
+                    <label for="imageUpload">Ảnh hiển thị</label>
+                <div class="picture" id="posterPreview"></div>
+                    <br>
+                <input type="file" name="avtRecord" id="posterUpload" accept="image/*">
+                <label for="recordUpload">Bản ghi</label>
+                <audio controls id="record-autido">
+
+                </audio>
+                <br>
+                <input type="file" name="Record" id="recordUpload" accept="/*.mp3">
+                    <button class="sumbit-button" id="record-sumbit">THÊM</button>
+                </div>
+        </div>
+    </div>
+</div>

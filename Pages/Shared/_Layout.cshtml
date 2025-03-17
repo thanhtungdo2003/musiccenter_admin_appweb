@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MusicCenterADMIN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/boxicons.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MusicCenterADMIN.styles.css" asp-append-version="true" />
+    <link rel="website icon" type="png" href="accset/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main role="main">
+            <!--Thẻ sửa thông tin-->
+            <div class="edit-form-backgound off">
+                <div class="edit-form-container off" id="edit-form-record">
+                    <div class="form-edit">
+                        <input id="edit-form-recordid" type="text" style="display: none"/>
+                        <input id="edit-form-poster-value" type="text" style="display: none"/>
+                        <input id="edit-form-coverphoto-value" type="text" style="display: none"/>
+                        <input id="edit-form-audio-value" type="text" style="display: none"/>
+                        <label>Tên bài hát</label><br />
+                        <input type="text" id="edit-form-record-title" placeholder="Tên bài hát"/><br />
+                        <label>Thể loại</label><br />
+                        <select id="edit-form-record-cate"></select><br />
+                        <label>Nghệ sĩ</label><br />
+                        <select id="edit-form-record-artist"></select><br />
+                        <label>Lượt nghe</label><br />
+                        <input type="number" id="edit-form-record-views" placeholder="Lượt nghe" /><br />
+                        <label for="">Trả phí</label><br>
+                        <div class="checkbox-wrapper-8">
+                            <input type="checkbox" id="payfee-checkbox-editaudio" class="tgl tgl-skewed">
+                            <label for="payfee-checkbox-editaudio" data-tg-on="ON" data-tg-off="OFF" class="tgl-btn"></label>
+                        </div>
+                        <label>Lời bài hát</label><br />
+                        <textarea id="edit-form-record-lyric"></textarea><br />
+                        <label>Thông tin bài hát</label><br />
+                        <textarea id="edit-form-record-description"></textarea><br />
+                        <label>File âm thanh</label><br />
+                        <input type="file" id="edit-form-record-record" /><br />
+                        <label>File Poster (Ảnh hiển thị)</label><br />
+                        <input type="file" id="edit-form-record-poster" /><br />
+                        <label>File Ảnh bìa (Ảnh bìa)</label><br />
+                        <input type="file" id="edit-form-record-cover-photo" /><br />
+                        <button class="edit-sumbit-button"><img src="~/lib/diskette.png"/></button>
+                        <button class="edit-delete-button">XÓA BÀI HÁT</button>
+                    </div>
+                    <div class="edit-record-previews">
+                        <label>Preview</label><br />
+                        <img id="edit-form-record-cover-photo-preview" src="" /><br />
+                        <img id="edit-form-record-poster-preview" src="" /><br />
+                        <label>Âm thanh</label><br />
+                        <audio controls id="edit-form-record-audio-preview" style="width: 100%; height: 50px">
+                            <source id="edit-form-record-audio-src-preview"/>
+                        </audio>
+                    </div>
+                </div>
+            </div>         
+            <div class="left-menu">
+                <div class="header-menu">
+                    <img id="logo" src="~/lib/logo.png" alt=""><a href="index">MUSIC-CENTER</a>
+                </div>
+                <div class="menu-content">
+                    <ul class="item-list">
+                        <li class="items record">
+                            <a href="#" style="color: white">Quản lý bài hát  ▾</a>
+                            <ul >
+                                <li><a style="color: rgb(200,200,200)" href="musicadd"> ⭢ Thêm bài hát</a></li>
+                                <li><a style="color: rgb(200,200,200)" href="category"> ⭢ Thêm thể loại</a></li>
+                                <li><a style="color: rgb(200,200,200)" href="record_list"> ⭢ Danh sách</a></li>
+                            </ul>                        
+                        </li>
+                        <li class="items artist">
+                            <a style="color: white" href="#">Quản lý nghệ sĩ  ▾</a>
+                            <ul>
+                                <li><a style="color: rgb(200,200,200)" href="artistAdd"> ⭢ Thêm nghệ sĩ</a></li>
+                                <li><a style="color: rgb(200,200,200)" href="artist_list"> ⭢ Danh sách</a></li>
+                            </ul>
+                        </li>
+                        <li class="items account"><a style="color: white" href="#">Quản lý tài khoản  ▾</a>
+                            <ul>
+                                <li><a style="color: rgb(200,200,200)" href="#"> ⭢ Đăng ký</a></li>
+                                <li><a style="color: rgb(200,200,200)" href="account_list"> ⭢ Danh sách</a></li>
+                            </ul>
+                        </li>
+                        <li class="items account">
+                            <a style="color: white" href="#">Thống kê  ▾</a>
+                            <ul>
+                                <li><a style="color: rgb(200,200,200)" href="Statistical"> ⭢ Thống kê tổng quát</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+    <div class="footer">&copy; DoThanhTung 2024</div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/account.js" asp-append-version="true"></script>
+    <script src="~/js/record.js" asp-append-version="true"></script>
+    <script src="~/js/artist.js" asp-append-version="true"></script>
+    <script src="~/js/Charts.js" asp-append-version="true"></script>
+    <script src="~/js/Chart.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-3.7.1.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@page
+@{
+    ViewData["Title"] = "Danh sách tài khoản";
+}
+<div class="main">
+    <h1>QUẢN LÝ - MUSIC-CENTER . DANH SÁCH TÀI KHOẢN</h1>
+    <hr />
+    
+    <div class="table-container">
+        <table id="table-account-list">
+            <tr class="field-title">
+                <th><input class="checkbox-data-all" type="checkbox" /></th>
+                <th>UserName</th>
+                <th>Mật khẩu băm</th>
+                <th>Trạng thái</th>
+                <th>Ngày đăng ký</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <div class="table-control">
+        <div class="table-page-control-container">
+            <button id="accounts-reload"><img src="~/lib/refresh-arrow.png"/></button>
+            <input id="page-next" type="button" value="Hiển thị thêm..."/>
+        </div>
+    </div>
+</div>
