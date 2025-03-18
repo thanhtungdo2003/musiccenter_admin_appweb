@@ -80,7 +80,7 @@ $(document).ready(function () {
                 }
             })
         });
-        $(".edit-delete-button").click(function () {
+        $(".edit-record-delete-button").click(function () {
             const id = $("#edit-form-recordid").val();
             $.ajax({
                 url: uri + "Record/remove-record/" + id,
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
             })
         });
-        $(".edit-sumbit-button").click(function () {
+        $(".edit-record-sumbit-button").click(function () {
             const id = $("#edit-form-recordid").val();
             const record_name = $("#edit-form-record-title").val();
             const record_cate_uid = $("#edit-form-record-cate").val();

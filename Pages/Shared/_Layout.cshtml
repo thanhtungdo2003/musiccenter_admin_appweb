@@ -21,12 +21,12 @@
             <div class="edit-form-backgound off">
                 <div class="edit-form-container off" id="edit-form-record">
                     <div class="form-edit">
-                        <input id="edit-form-recordid" type="text" style="display: none"/>
-                        <input id="edit-form-poster-value" type="text" style="display: none"/>
-                        <input id="edit-form-coverphoto-value" type="text" style="display: none"/>
-                        <input id="edit-form-audio-value" type="text" style="display: none"/>
+                        <input id="edit-form-recordid" type="text" style="display: none" />
+                        <input id="edit-form-poster-value" type="text" style="display: none" />
+                        <input id="edit-form-coverphoto-value" type="text" style="display: none" />
+                        <input id="edit-form-audio-value" type="text" style="display: none" />
                         <label>Tên bài hát</label><br />
-                        <input type="text" id="edit-form-record-title" placeholder="Tên bài hát"/><br />
+                        <input type="text" id="edit-form-record-title" placeholder="Tên bài hát" /><br />
                         <label>Thể loại</label><br />
                         <select id="edit-form-record-cate"></select><br />
                         <label>Nghệ sĩ</label><br />
@@ -48,8 +48,8 @@
                         <input type="file" id="edit-form-record-poster" /><br />
                         <label>File Ảnh bìa (Ảnh bìa)</label><br />
                         <input type="file" id="edit-form-record-cover-photo" /><br />
-                        <button class="edit-sumbit-button"><img src="~/lib/diskette.png"/></button>
-                        <button class="edit-delete-button">XÓA BÀI HÁT</button>
+                        <button class="edit-sumbit-button edit-record-sumbit-button"><img src="~/lib/diskette.png" /></button>
+                        <button class="edit-delete-button edit-record-delete-button">XÓA BÀI HÁT</button>
                     </div>
                     <div class="edit-record-previews">
                         <label>Preview</label><br />
@@ -57,11 +57,32 @@
                         <img id="edit-form-record-poster-preview" src="" /><br />
                         <label>Âm thanh</label><br />
                         <audio controls id="edit-form-record-audio-preview" style="width: 100%; height: 50px">
-                            <source id="edit-form-record-audio-src-preview"/>
+                            <source id="edit-form-record-audio-src-preview" />
                         </audio>
                     </div>
                 </div>
-            </div>         
+                <!--form edit artist-->
+                <div class="edit-form-container off" id="edit-form-artist">
+                    <div class="form-edit">
+                        <input id="edit-form-artist-id" type="text" style="display: none" />
+                        <input id="edit-form-artist-avata-value" type="text" style="display: none" />
+                        <label>Tên nghệ sĩ (nghệ danh)</label><br />
+                        <input type="text" id="edit-form-artist-stagename" placeholder="Tên nghệ sĩ" /><br />
+                        <label>Lượt truy cập</label><br />
+                        <input type="number" id="edit-form-artist-visits" placeholder="Lượt truy cập" /><br />
+
+                        <label>Ảnh đại diện</label><br />
+                        <input type="file" id="edit-form-artist-avata" /><br />
+
+                        <button class="edit-sumbit-button edit-artist-submit-btn"><img src="~/lib/diskette.png" /></button>
+                        <button class="edit-delete-button edit-artist-delete-btn">XÓA NGHỆ SĨ</button>
+                    </div>
+                    <div class="edit-record-previews">
+                        <label>Preview</label><br />
+                        <img id="edit-form-artist-avata-preview" src="" style="width:150px; height:150px; border-radius:10px; object-fit:contain" /><br />
+                    </div>
+                </div>
+            </div>
             <div class="left-menu">
                 <div class="header-menu">
                     <img id="logo" src="~/lib/logo.png" alt=""><a href="index">MUSIC-CENTER</a>
@@ -70,11 +91,11 @@
                     <ul class="item-list">
                         <li class="items record">
                             <a href="#" style="color: white">Quản lý bài hát  ▾</a>
-                            <ul >
+                            <ul>
                                 <li><a style="color: rgb(200,200,200)" href="musicadd"> ⭢ Thêm bài hát</a></li>
                                 <li><a style="color: rgb(200,200,200)" href="category"> ⭢ Thêm thể loại</a></li>
                                 <li><a style="color: rgb(200,200,200)" href="record_list"> ⭢ Danh sách</a></li>
-                            </ul>                        
+                            </ul>
                         </li>
                         <li class="items artist">
                             <a style="color: white" href="#">Quản lý nghệ sĩ  ▾</a>
@@ -83,7 +104,8 @@
                                 <li><a style="color: rgb(200,200,200)" href="artist_list"> ⭢ Danh sách</a></li>
                             </ul>
                         </li>
-                        <li class="items account"><a style="color: white" href="#">Quản lý tài khoản  ▾</a>
+                        <li class="items account">
+                            <a style="color: white" href="#">Quản lý tài khoản  ▾</a>
                             <ul>
                                 <li><a style="color: rgb(200,200,200)" href="#"> ⭢ Đăng ký</a></li>
                                 <li><a style="color: rgb(200,200,200)" href="account_list"> ⭢ Danh sách</a></li>
